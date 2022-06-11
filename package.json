@@ -8,9 +8,9 @@
   "scripts": {
     "start": "babel-node index.js",
     "start:dev": "nodemon",
-    "test": "jest",
-    "test:cov": "jest --coverage",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test": "jest --testPathPattern=src",
+    "test:cov": "jest --testPathPattern=src --coverage",
+    "test:e2e": "jest --testPathPattern=test"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
@@ -33,12 +33,9 @@
     "supertest": "6.2.3"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json"
-    ],
-    "rootDir": "src",
+    "moduleFileExtensions": ["js", "json"],
+    "rootDir": ".",
     "testRegex": ".spec.js$",
-    "coverageDirectory": "../coverage"
+    "coverageDirectory": "coverage"
   }
 }
