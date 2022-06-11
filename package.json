@@ -1,8 +1,8 @@
 {
   "name": "roman-numeral-service",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "NestJs-based service that converts numbers to Roman numeral representations",
+  "author": "Evangelos Dimitriou",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
