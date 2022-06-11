@@ -2,7 +2,6 @@ import { Test } from '@nestjs/testing';
 import { RomanNumeralConverterException, RomanNumeralConverterService } from './roman-numeral-converter.service';
 
 describe('RomanNumeralConverterService', () => {
-
   let service;
 
   beforeEach(async () => {

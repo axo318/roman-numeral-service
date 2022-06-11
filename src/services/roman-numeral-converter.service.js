@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ServiceException } from '../common/service.exception';
 
-
 export const SV = '\u0305';           // single Vinculum
 export const DV = '\u033F';           // double Vinculum
 
