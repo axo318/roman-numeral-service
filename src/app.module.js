@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { RomanNumeralConverterService } from './roman-numeral-converter/roman-numeral-converter.service';
+import { RomanNumeralConverterService } from './services/roman-numeral-converter.service';
 
 @Module({
   imports: [],
