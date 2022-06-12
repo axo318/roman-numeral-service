@@ -60,6 +60,7 @@ Controller-Service pattern, separating concerns between endpoint serving and con
 by not focusing on specific implementation details.
 - End-to-end tests are used to verify the endpoint's correct functionality, and also ensure error
 handling is performed correctly.
+- Unit test coverage reports are also available in directory `coverage/` after performing `npm run test:cov`
 
 ### Layout
 ````
