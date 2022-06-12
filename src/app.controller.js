@@ -1,8 +1,10 @@
-import { Bind, Controller, Dependencies, Get, ParseIntPipe, Query } from '@nestjs/common';
+import { Bind, Controller, Dependencies, Get, ParseIntPipe, Query, UseInterceptors } from '@nestjs/common';
 import { RomanNumeralConverterService } from './services/roman-numeral-converter.service';
+import { MonitorInterceptor } from './common/monitor.interceptor';
 
 @Controller()
 @Dependencies(RomanNumeralConverterService)
+@UseInterceptors(MonitorInterceptor)
 export class AppController {
   /**
    * @param {RomanNumeralConverterService} romanNumeralConverterService
