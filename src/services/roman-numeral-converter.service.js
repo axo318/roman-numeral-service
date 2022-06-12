@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { ServiceException } from '../common/service.exception';
 
-export const SV = '\u0305';           // single Vinculum
-export const DV = '\u033F';           // double Vinculum
+export const SINGLE_VINCULUM = '\u0305';  // single Vinculum
+export const DOUBLE_VINCULUM = '\u033F';  // double Vinculum
 
 export class RomanNumeralConverterException extends ServiceException {}
 
@@ -11,12 +11,12 @@ export class RomanNumeralConverterService {
   minimumNumber = 0;
   maximumNumber = 3999999999;
 
-  romanUniqueValues = [9, 5, 4, 1];   // Numbers that have unique roman symbols
+  romanUniqueValues = [9, 5, 4, 1];       // Numbers that have unique roman symbols
   romanUniqueSymbols = [
-    ['IX', 'V', 'IV', 'I'],           // Power of 0 (*10^0)
-    ['XC', 'L', 'XL', 'X'],           // Power of 1 (*10^1)
-    ['CM', 'D', 'CD', 'C'],           // Power of 2 (*10^2)
-    ['', '', '', 'M']                 // Power of 9 (*10^9)
+    ['IX', 'V', 'IV', 'I'],               // Power of 0 (*10^0)
+    ['XC', 'L', 'XL', 'X'],               // Power of 1 (*10^1)
+    ['CM', 'D', 'CD', 'C'],               // Power of 2 (*10^2)
+    ['', '', '', 'M']                     // Power of 9 (*10^9)
   ];
 
   /**
@@ -109,7 +109,7 @@ export class RomanNumeralConverterService {
       return numeralString;
     }
 
-    const vinculum = power < 6 ? SV : DV;
+    const vinculum = power < 6 ? SINGLE_VINCULUM : DOUBLE_VINCULUM;
     return Array.from(numeralString)
       .map(char => char.concat(vinculum))
       .join('');
