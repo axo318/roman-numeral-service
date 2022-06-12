@@ -63,7 +63,7 @@ handling is performed correctly.
 - Unit test coverage reports are also available in directory `coverage/` after performing `npm run test:cov`
 
 ### Layout
-````
+```
 ├── src
 │   ├── common
 │   │   └── service.exception.js
@@ -83,4 +83,4 @@ handling is performed correctly.
 ├── nest-cli.json
 ├── nodemon.json
 └── package.json
-````
+```
