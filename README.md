@@ -14,6 +14,7 @@ This service provides an endpoint that converts integers in the range `[0 - 3,99
 ## Installation
 
 ```bash
+# Execute in repo's root directory
 $ npm install
 ```
 
@@ -41,7 +42,7 @@ $ npm run test:cov
 ```
 
 
-## Usage
+## Using the Service
 Once the server is running locally, numbers can be converted to Roman numerals using the following GET endpoint:
 - `http://localhost:8080/romannumeral?query={number}`
 
@@ -54,6 +55,7 @@ Controller-Service pattern, separating concerns between endpoint serving and con
 - [Babel](https://babeljs.io/) transpiler is used to support new JS features (such as decorators).
 - [Jest](https://jestjs.io/) is used to setup and run all tests.
 - e2e queries are performed with [supertest](https://www.npmjs.com/package/supertest).
+- Request/Response monitoring was implemented using [NestJs Interceptors](https://docs.nestjs.com/interceptors). This can easily be extended and connected to a central monitoring platform (such as [Seq](https://datalust.co/seq)) 
 
 ### Testing Strategy
 - Unit tests ensure the conversion logic quality remains high and improve maintainability 
@@ -63,6 +65,7 @@ handling is performed correctly.
 - Unit test coverage reports are also available in directory `coverage/` after performing `npm run test:cov`
 
 ### Layout
+- The package layout was generated using nest-cli and follows recommended NestJS standards.
 ```
 ├── src
 │   ├── common
