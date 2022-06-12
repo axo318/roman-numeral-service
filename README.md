@@ -69,6 +69,7 @@ The package layout was generated using nest-cli and follows recommended NestJS s
 ```
 ├── src
 │   ├── common
+│   │   ├── monitor.interceptor.js
 │   │   └── service.exception.js
 │   ├── services
 │   │   ├── roman-numeral-converter.service.js
