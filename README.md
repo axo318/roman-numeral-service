@@ -65,7 +65,7 @@ handling is performed correctly.
 - Unit test coverage reports are also available in directory `coverage/` after performing `npm run test:cov`
 
 ### Layout
-- The package layout was generated using nest-cli and follows recommended NestJS standards.
+The package layout was generated using nest-cli and follows recommended NestJS standards.
 ```
 ├── src
 │   ├── common
